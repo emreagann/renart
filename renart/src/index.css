@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root{
+  --yellow-gold: #E6CA97;
+  --white-gold: #D9D9D9;
+  --rose-gold: #E1A4A9;
+}
+
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('./assets/fonts/Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('./assets/fonts/Montserrat-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  /* Resme yakın fontları tanımlıyoruz. */
+  font-family: 'MontserratRegular', 'Montserrat', sans-serif;
+  color: #333;
+  margin: 0;
+}
+html, body { overflow-x: hidden; }
+
+/* Swiper Navigasyonu (Oklar) için stil düzeltmeleri */
+/* Custom okları kullandığımız için Swiper'ın varsayılan oklarını gizliyoruz. */
+.outer-swiper .swiper-button-next,
+.outer-swiper .swiper-button-prev {
+  display: none;
+}
+
+/* Custom ok stilleri */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  transition: opacity 0.3s;
+}
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  opacity: 0.7;
+}
+
+/* Resimlerin içinde bulunduğu Swiper kapsayıcısı */
+.image-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-swiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
